@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./style.css" rel="stylesheet">
+    <title>Lista de tarefas</title>
+
+    <script>
+
+        onload = function () {
+            
+            let items1 = document.getElementById("items1")
+            let items2 = document.getElementById("items2")
+
+            let op1 = Object.keys(localStorage)
+            for (var i = 0; i < op1.length; i++) {
+                items1.innerHTML += '<li>'+ op1[i]+' -</li>'
+            }
+            let op2 = Object.values(localStorage)
+            for (var i = 0; i < op2.length; i++) {
+                items2.innerHTML += '<li>'+ op2[i]+'</li>'
+            }
+
+
+
+        }
+
+        function adc() {
+            
+            let inputString = document.getElementById("inputString")
+            let inputValue = document.getElementById("inputValue")
+            let submit = document.getElementById("submit")
+
+            let string = inputString.value
+            let valor = inputValue.value
+
+            
+            let memo = localStorage.setItem(valor, string)
+            return memo
+
+
+
+            console.log(valor)
+        }
+
+        function del() {
+            localStorage.clear()
+            location.href = 'index.html'
+        }
+
+
+
+
+
+    </script>
+
+</head>
+
+<body>
+    <section id="container">
+    <h1>O que tem na minha memória?</h1>
+    <form>
+        <input class="insert" type="text" placeholder="Insert Value" id="inputValue">
+        <input class="insert" type="text" placeholder="Insert String" id="inputString">
+            <br>
+        <input class="refresh" type="submit" id="submit" onclick="adc()">
+        <input class="refresh" type="submit" id="clear" value="Limpar" onclick="del()">
+    </form>
+
+    <ul id="items1">
+
+    </ul>
+    <ul id="items2">
+
+    </ul>
+    </section>
+</body>
+
+</html>
