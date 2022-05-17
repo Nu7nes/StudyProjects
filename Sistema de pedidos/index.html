@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedidos</title>
+    <link href="./style.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <ul id="menu">
+            <li id="novoPedido" class="btnH" onclick="pedir()">Novo</li>
+            <li id="pedidos" class="btnH" onclick="ver()">Pedidos</li>
+        </ul>
+    </header>
+
+    
+
+    <!-- NOVO PEDIDO -->
+    <section id="contNovo" class="container1">
+        <form id="some-form">
+            <ul class="listas">
+                <h1>Doces</h1>
+                <li><h3>Coco</h3> 
+                    <div class="quantidade"> 
+                        <div id="menos" class="subtrair" onclick="sub0()">-</div>
+                        <input class="input" type="number" value="0">  
+                        <div id="mais" class="somar" onclick="adc0()">+</div>
+                    </div>
+                </li>
+                    <hr/>
+                <li><h3>Coco com Leite Condensado</h3>
+                    <div class="quantidade"> 
+                        <div id="menos" class="subtrair" onclick="sub1()">-</div>
+                        <input class="input" type="number" value="0">  
+                        <div id="mais" class="somar" onclick="adc1()">+</div>
+                    </div>
+                </li>
+                <hr/>
+                <li><h3>Coco com Nutella</h3>
+                    <div class="quantidade"> 
+                        <div id="menos" class="subtrair" onclick="sub2()">-</div>
+                        <input class="input" type="number" value="0">  
+                        <div id="mais" class="somar" onclick="adc2()">+</div>
+                    </div>
+                </li>
+                <hr/>
+                <li><h3>Queijo com Goiabada</h3>
+                    <div class="quantidade"> 
+                        <div id="menos" class="subtrair" onclick="sub3()">-</div>
+                        <input class="input" type="number" value="0">  
+                        <div id="mais" class="somar" onclick="adc3()">+</div>
+                    </div>
+                </li>
+                <hr/>
+                <li><h3>Morango com Nutella</h3>
+                    <div class="quantidade"> 
+                        <div id="menos" class="subtrair" onclick="sub4()">-</div>
+                        <input class="input" type="number" value="0">  
+                        <div id="mais" class="somar" onclick="adc4()">+</div>
+                    </div>
+                </li>
+                    
+            </ul>
+
+            <ul class="listas">
+                <h1>SALGADAS</h1>
+                <li><h3>Queijo Coalho</h3>
+                    <div class="quantidade"> 
+                        <div id="menos" class="subtrair" onclick="sub5()">-</div>
+                        <input class="input" type="number" value="0">  
+                        <div id="mais" class="somar" onclick="adc5()">+</div>
+                    </div>
+                </li>
+                <hr/>
+                <li><h3>Queijo Minas</h3>
+                    <div class="quantidade"> 
+                        <div id="menos" class="subtrair" onclick="sub6()">-</div>
+                        <input class="input" type="number" value="0">  
+                        <div id="mais" class="somar" onclick="adc6()">+</div>
+                    </div>
+                </li>
+                <hr/>
+                <li><h3>Peito de Peru</h3>
+                    <div class="quantidade"> 
+                        <div id="menos" class="subtrair" onclick="sub7()">-</div>
+                        <input class="input" type="number" value="0">  
+                        <div id="mais" class="somar" onclick="adc7()">+</div>
+                    </div>
+                </li>
+                <hr/>
+                <li><h3>Carne Seca</h3>
+                    <div class="quantidade"> 
+                        <div id="menos" class="subtrair" onclick="sub8()">-</div>
+                        <input class="input" type="number" value="0">  
+                        <div id="mais" class="somar" onclick="adc8()">+</div>
+                    </div>
+                </li>
+                <hr/>
+                <li><h3>Frango</h3>
+                    <div class="quantidade"> 
+                        <div id="menos" class="subtrair" onclick="sub9()">-</div>
+                        <input class="input" type="number" value="0">  
+                        <div id="mais" class="somar" onclick="adc9()">+</div>
+                    </div>
+                </li>
+            </ul>
+            <div id="npedido">0</div>
+            <div  id="pedir"  onclick="submit()">PEDIR</div>
+        </form>
+    </section>
+
+    <!-- PEDIDOS EM ABERTO -->
+    <section id="contAntigos" class="container2">
+        <div id="pedidos1"></div>
+    </section>
+
+
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/quantidade.js"></script>
+    <script src="./scripts/pedidos.js"></script>
+
+    <script src = " https://unpkg.com/sweetalert/dist/sweetalert.min.js "> </script > 
+</body>
+</html>
