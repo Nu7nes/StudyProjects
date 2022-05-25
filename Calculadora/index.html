@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calculadora</title>
 
 
 </head>
@@ -14,53 +14,59 @@
 <body>
     <section>
         <div id="box1">
-            <h1 id="operador" class="oper"></h1>
-            <h1 id="valor" class="result">0</h1>
-            <h1 id="valor2" class="result"></h1>
-            <h1 id="resultado"></h1>
+            <div id="inBox1">
+                <h1 id="operador" class="oper"></h1>
+            </div>
+            <div id="inBox2">
+                <h1 id="valor" class="result">0</h1>
+                <h1 id="valor2" class="result"></h1>
+                <h1 id="resultado"></h1>
+            </div>
         </div>
 
         <br>
         <div id="box2">
             <table>
                 <tr>
-                    <th><input type="submit" value="7"></th>
+                    <th><input type="submit" value="7" ></th>
                     <th><input type="submit" value="8"></th>
                     <th><input type="submit" value="9"></th>
-                    <th><input type="submit" value="+"></th>
+                    <th><input type="submit" value="+" rec="1"></th>
                 </tr>
                 <tr>
                     <th><input type="submit" value="4"></th>
                     <th><input type="submit" value="5"></th>
                     <th><input type="submit" value="6"></th>
-                    <th><input type="submit" value="-"></th>
+                    <th><input type="submit" value="-" rec="1"></th>
                 </tr>
                 <tr>
                     <th><input type="submit" value="1"></th>
                     <th><input type="submit" value="2"></th>
                     <th><input type="submit" value="3"></th>
-                    <th><input type="submit" value="x"></th>
+                    <th><input type="submit" value="x" rec="1"></th>
                 </tr>
                 <tr>
                     <th><input type="submit" value="."></th>
                     <th><input type="submit" value="0"></th>
                     <th><input type="submit" value=","></th>
-                    <th><input type="submit" value="/"></th>
+                    <th><input type="submit" value="/" rec="1"></th>
                 </tr>
 
             </table>
-           
-            <div id="limpar" class="fim">
-                <h5>C</h5>
-            </div>
-            <div id="total" class="fim">
-                <h5>=</h5>
+            <div id="fim1">
+                <div id="limpar" class="fim">
+                    <h5>C</h5>
+                </div>
+                <div id="total" class="fim">
+                    <h5>=</h5>
+                </div>
             </div>
         </div>
     </section>
 
     <script src="./buttoms.js"></script>
     <script src="./calc.js"></script>
+    <!-- <script src="./css.js"></script> -->
 
 
 
