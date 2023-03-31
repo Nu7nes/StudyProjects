@@ -4,16 +4,16 @@ let point = document.getElementById('point');
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    let width = document.getElementById('nivel').clientWidth;
-    document.getElementById('nivel').style.height = width + 'px';
-    document.getElementById('point').style.width = (width / 100 * 5) + 'px';
-    document.getElementById('point').style.height = (width / 100 * 5) + 'px';
+    let nivelWidth = document.getElementById('nivel').clientWidth;
+    document.getElementById('nivel').style.height = nivelWidth + 'px';
+    point.style.width = (nivelWidth / 100 * 5) + 'px';
+    point.style.height = (nivelWidth / 100 * 5) + 'px';
     point.style.top = '48%';
     point.style.left = '48%';
 
-    let pointPOS = point.getBoundingClientRect();
-    topDefault = pointPOS.x;
-    leftDefault = pointPOS.y;
+    // let pointPOS = point.getBoundingClientRect();
+    // topDefault = pointPOS.x;
+    // leftDefault = pointPOS.y;
     
 })
 

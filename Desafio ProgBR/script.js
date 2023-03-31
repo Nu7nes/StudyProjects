@@ -8,6 +8,7 @@ if (window.DeviceOrientationEvent) {
         if (event.beta !== undefined) {
             // console.log('valor de beta mudou para:', event.beta);
             document.getElementById('beta').innerHTML = `<p>beta: ${event.beta}</p>`
+            changePointState(event.beta);
         }
         if (event.gamma !== undefined) {
             // console.log('valor de gamma mudou para:', event.gamma);
@@ -24,11 +25,12 @@ if (window.DeviceOrientationEvent) {
 //     document.getElementById('info').innerHTML += `<p>S</p>${event.acceleration.x}`;
 //   });
 
-// function changePointState() {
-//     // point.style.top = topDefault - x +'px'
-//     // point.style.left
-//     // topDefault
-//     // leftDefault
-//     document.getElementById('info').innerHTML += `<p>S</p><p>${topDefault}</p>`
-// }
-// changePointState();
+function changePointState(axis) {
+    point.style.height = (nivelWidth / 100 * 5) + axis + 'px';
+    // point.style.top = topDefault - x +'px'
+    // point.style.left
+    // topDefault
+    // leftDefault
+    // document.getElementById('info').innerHTML += `<p>S</p><p>${topDefault}</p>`
+}
+changePointState();
