@@ -8,7 +8,7 @@ if (window.DeviceOrientationEvent) {
         if (event.beta !== undefined) {
             // console.log('valor de beta mudou para:', event.beta);
             document.getElementById('beta').innerHTML = `<p>beta: ${event.beta}</p>`
-            changePointState(event.beta);
+           changePointState(event.beta);
         }
         if (event.gamma !== undefined) {
             // console.log('valor de gamma mudou para:', event.gamma);
@@ -33,4 +33,4 @@ function changePointState(axis) {
     // leftDefault
     // document.getElementById('info').innerHTML += `<p>S</p><p>${topDefault}</p>`
 }
-changePointState();
+
