@@ -18,7 +18,7 @@ if (window.DeviceOrientationEvent) {
         // }
         console.log(event)
     })
-} else {document.getElementById('info').innerHTML += `<p>error</p>`}
+} else {document.getElementById('info').innerHTML = `<p>error</p>`}
 
 // window.addEventListener("devicemotion", (event) => {
 //     document.getElementById('info').innerHTML += `<p>S</p>${event.acceleration.x}`;
