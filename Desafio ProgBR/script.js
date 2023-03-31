@@ -2,15 +2,15 @@ if (window.DeviceOrientationEvent) {
     window.addEventListener('deviceorientationabsolute', (event) => {
 
         if (event.alpha !== undefined) {
-            console.log('valor de alpha mudou para:', event.alpha);
+            // console.log('valor de alpha mudou para:', event.alpha);
             document.getElementById('alpha').innerHTML = `<p>alpha: ${event.alpha}</p>`
         }
         if (event.beta !== undefined) {
-            console.log('valor de beta mudou para:', event.beta);
+            // console.log('valor de beta mudou para:', event.beta);
             document.getElementById('beta').innerHTML = `<p>beta: ${event.beta}</p>`
         }
         if (event.gamma !== undefined) {
-            console.log('valor de gamma mudou para:', event.gamma);
+            // console.log('valor de gamma mudou para:', event.gamma);
             document.getElementById('gamma').innerHTML = `<p>gamma: ${event.gama}</p>`
         }
         // if (event.absolute !== undefined) {
