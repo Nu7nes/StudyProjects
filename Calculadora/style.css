@@ -1,133 +1,197 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-html{
-    height: 100%;
-    width: 100%;
-}
-body{
-    height: 100%;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
+body {
+  font-family: "Righteous", cursive;
+  height: 100vh;
 
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    background-image: linear-gradient(to bottom right, #FFF5C3, #9452A5);
-    background-repeat: no-repeat;
-    background-size: cover;
-
-    color: white;
-
-}
-section{
-    width: 400px;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    22deg,
+    rgba(2, 0, 36, 1) 34%,
+    rgba(75, 75, 75, 1) 100%
+  );
 }
 
-#box1{
-    background-color: rgba(30, 30, 30, 0.282);
-    
-    width: 100%;
-    height: 165px;
+header {
+  width: 100%;
+  padding: 5vh;
+  display: flex;
+  justify-content: space-around;
 
-    display: flex;
-    flex-direction: row;
-
-    font-size: 30px;
-
-    /* padding: 2%; */
+  color: white;
+}
+h1 {
+  font-size: 30px;
+  font-weight: 100;
+}
+nav {
+  display: flex;
+  align-items: center;
+}
+ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+li {
+  list-style: none;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1px;
+  cursor: pointer;
+}
+.material-symbols-rounded {
+  font-variation-settings: "FILL" 1, "wght" 100, "GRAD" 200, "opsz" 40;
 }
 
-#inBox1{
-    /* background-color: blue; */
-    flex-grow: 1;
-
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
+section {
+  display: flex;
+  justify-content: center;
 }
-#inBox2{
-    flex-grow: 4;
-    
-    text-align: right;
-    flex-direction: column;
-    
+#area {
+  max-width: fit-content;
 }
-
-
-
-
-#box2{
-    width: 100%;
-    margin: -5px;
-
-    
+#display {
+  max-width: 424px;
+  width: 100%;
+  height: fit-content;
+  padding: 20px;
+  background-color: rgba(161, 161, 161, 0.421);
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+  align-items: center;
+  display: flex;
+  font-family: "Montserrat", sans-serif;
+  font-size: 70px;
 }
-table{
-    width: 100%;
-    margin: -5px;
+#result {
+  max-width: 4244px;
+  width: 100%;
+  height: 100px;
+  padding: 20px;
+  background-color: rgba(161, 161, 161, 0.421);
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
+  align-items: center;
+  display: flex;
+  font-family: "Montserrat", sans-serif;
+  font-size: 40px;
 }
-th{
-    height: 1vw;
-    
+#board {
+  display: grid;
+  grid-template-areas:
+    "a a b c"
+    "d e f g"
+    "h i j k"
+    "l m n o"
+    "p q r r";
+  background-color: rgba(121, 121, 121, 0.227);
+  padding: 20px;
 }
-
-
-input[type = submit]{
-   
-    color: white;
-    font-size: 40px;
-    
-    width: 100%;
-    height: 100%;
-
-    border: 2px solid rgba(76, 76, 76, 0.847);
-    margin:10px;
-
-    background-color: rgba(76, 76, 76, 0.274);
-
-    
+#board div {
+  width: 90px;
+  height: 90px;
+  margin: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border-radius: 50px;
 }
-
-input[rec]{
-    background-color: #24676d65;
+#board div:hover {
+  transform: scale(1.06);
+  transition: transform 300ms;
 }
-
-#fim1{
-    display: flex;
-    flex-direction: row;
-
-    margin-left: 6px;
-    
-}
-.fim{
-    width: 50%;
-    
-    background-color: #24676d65;
-    border: 2px solid rgba(76, 76, 76, 0.847);
-
-    margin: 1px;
-    margin-top: 10px;
-
-    height: 100%;
-
-    text-align: center;
-
-    font-size: 60px;
-    font-weight: bold;
-
-    
+.btn {
+  font-size: 40px;
+  font-family: "Montserrat", sans-serif;
 }
 
-
-
-
-
+#buttonC {
+  grid-area: a;
+  min-width: 180px;
+  background-color: yellow;
+}
+#buttonParenth {
+  grid-area: b;
+  background-color: rgba(255, 255, 255, 0.835);
+}
+#buttonMore {
+  grid-area: c;
+  background-color: rgba(255, 255, 255, 0.835);
+}
+#button1 {
+  grid-area: d;
+  background-color: rgba(255, 255, 255, 0.835);
+}
+#button2 {
+  grid-area: e;
+  background-color: rgba(255, 255, 255, 0.835);
+}
+#button3 {
+  grid-area: f;
+  background-color: rgba(255, 255, 255, 0.835);
+}
+#buttonSub {
+  grid-area: g;
+  background-color: rgba(255, 255, 255, 0.835);
+}
+#button4 {
+  grid-area: h;
+  background-color: rgba(255, 255, 255, 0.835);
+}
+#button5 {
+  grid-area: i;
+  background-color: rgba(255, 255, 255, 0.835);
+}
+#button6 {
+  grid-area: j;
+  background-color: rgba(255, 255, 255, 0.835);
+}
+#buttonMulti {
+  grid-area: k;
+  background-color: rgba(255, 255, 255, 0.835);
+}
+#button7 {
+  grid-area: l;
+  background-color: rgba(255, 255, 255, 0.835);
+}
+#button8 {
+  grid-area: m;
+  background-color: rgba(255, 255, 255, 0.835);
+}
+#button9 {
+  grid-area: n;
+  background-color: rgba(255, 255, 255, 0.835);
+}
+#buttonDiv {
+  grid-area: o;
+  background-color: rgba(255, 255, 255, 0.835);
+}
+#buttonPoint {
+  grid-area: p;
+  background-color: rgba(255, 255, 255, 0.835);
+}
+#button0 {
+  grid-area: q;
+  background-color: rgba(255, 255, 255, 0.835);
+}
+#buttonEqual {
+  grid-area: r;
+  background-color: yellow;
+  min-width: 180px;
+}
 
 @media screen and (max-width: 500px) {
-    section{
-        width: 80%;
-    }
 }
