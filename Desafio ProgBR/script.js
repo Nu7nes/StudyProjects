@@ -1,36 +1,29 @@
+
 if (window.DeviceOrientationEvent) {
     window.addEventListener('deviceorientationabsolute', (event) => {
 
         if (event.alpha !== undefined) {
-            // console.log('valor de alpha mudou para:', event.alpha);
             document.getElementById('alpha').innerHTML = `<p>alpha: ${event.alpha}</p>`
         }
         if (event.beta !== undefined) {
-            // console.log('valor de beta mudou para:', event.beta);
             document.getElementById('beta').innerHTML = `<p>beta: ${event.beta}</p>`
-           changePointState(event.beta);
+            changePointStateX(event.beta);
         }
         if (event.gamma !== undefined) {
-            // console.log('valor de gamma mudou para:', event.gamma);
-            document.getElementById('gamma').innerHTML = `<p>gamma: ${event.gama}</p>`
+            document.getElementById('gamma').innerHTML = `<p>gamma: ${event.gamma}</p>`
+            changePointStateY(event.gamma)
         }
-        // if (event.absolute !== undefined) {
-        //     console.log('valor de absolute mudou para:', event.absolute);
-        // }
-        console.log(event)
+        if (event.absolute !== undefined) {
+            document.getElementById('absolute').innerHTML = `<p>absolute: ${event.absolute}</p>`
+        }
+        
     })
-} else {document.getElementById('info').innerHTML = `<p>error</p>`}
+} else { document.getElementById('info').innerHTML = `<p>error</p>` }
 
-// window.addEventListener("devicemotion", (event) => {
-//     document.getElementById('info').innerHTML += `<p>S</p>${event.acceleration.x}`;
-//   });
-
-function changePointState(axis) {
-    point.style.height = (nivelWidth / 100 * 5) + axis + 'px';
-    // point.style.top = topDefault - x +'px'
-    // point.style.left
-    // topDefault
-    // leftDefault
-    // document.getElementById('info').innerHTML += `<p>S</p><p>${topDefault}</p>`
+function changePointStateX(axis) {
+    point.style.top = pointPositionTOP + (axis*4) + 'px'
+}
+function changePointStateY(axis) {
+    point.style.left = pointPositionLEFT + (axis*4) + 'px'
 }
 
